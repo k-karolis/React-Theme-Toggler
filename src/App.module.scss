@@ -1,89 +1,59 @@
 $brightWhite: rgb(236, 236, 236);
 $darkBlue: rgb(34, 40, 49);
+$transitionDuration: 0.6s;
 
-:root {
-  --transitionDuration: 0.6s;
-}
-
-.LightMode {
-  background: linear-gradient(
-      rgba(236, 236, 236, 0.5),
-      rgba(236, 236, 236, 0.75)
-    ),
-    url("https://source.unsplash.com/random") no-repeat center;
-  color: $darkBlue;
-  transition: all var(--transitionDuration) cubic-bezier(0.42, 0, 0.58, 1);
-  animation: backgroundIMG 2s ease-in-out 2s;
-  animation-fill-mode: forwards;
-}
-
-.DarkMode {
-  background: linear-gradient(rgba(34, 40, 49, 0.75), rgba(34, 40, 49, 0.5)),
-    url("https://source.unsplash.com/random") no-repeat center;
-  color: $brightWhite;
-  transition: all var(--transitionDuration) cubic-bezier(0.42, 0, 0.58, 1);
-
-  > .App .Toggle {
-    transition: all var(--transitionDuration) cubic-bezier(0.42, 0, 0.58, 1);
-    background-color: $brightWhite;
-    color: $darkBlue;
-    box-shadow: rgba(236, 236, 236, 0.1) 0px 8px 24px,
-      rgba(236, 236, 236, 0.1) 0px 16px 56px,
-      rgba(236, 236, 236, 0.1) 0px 24px 80px;
-  }
-
-  > .App .Card {
-    transition: all var(--transitionDuration) cubic-bezier(0.42, 0, 0.58, 1);
-    border: 1px solid $brightWhite;
-    box-shadow: rgba(236, 236, 236, 0.1) 0px 8px 24px,
-      rgba(236, 236, 236, 0.1) 0px 16px 56px,
-      rgba(236, 236, 236, 0.1) 0px 24px 80px;
-  }
+body {
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .App {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Pacifico", cursive;
   height: 100vh;
-  transition: all var(--transitionDuration) cubic-bezier(0.42, 0, 0.58, 1);
-  > .Toggle {
+}
+
+.Icon {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.LightMode {
+  background-color: rgba(236, 236, 236, 0.55);
+  transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
+  > .App .Toggle {
     position: absolute;
     top: 100px;
     left: calc(50% - 50px);
-    width: 100px;
-    height: 57.5px;
+    width: 85px;
+    height: 60px;
     border-radius: 35px;
     background-color: $darkBlue;
     color: $brightWhite;
+    transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
     box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
-      rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 0.1) 0px 24px 80px;
-    transition: all var(--transitionDuration) cubic-bezier(0.42, 0, 0.58, 1);
-  }
-  > .Card {
-    width: 300px;
-    height: 400px;
-    position: absolute;
-    top: 30%;
-    left: calc(50% - 150px);
-    border: 1px solid $darkBlue;
-    border-radius: 35px;
-    box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
-      rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 0.1) 0px 24px 80px;
-    > h1 {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 3rem;
-    }
-    > p {
-      margin-top: 20px;
-      font-family: "Pacifico", cursive;
-      text-align: center;
-      font-size: 1.5rem;
-    }
+      rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 1) 0px 24px 80px;
   }
 }
 
-.App .Icon {
-  position: absolute;
-  left: 12.5px;
-  top: 3.75px;
+.DarkMode {
+  background-color: rgba(34, 40, 49, 0.55);
+  transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
+  > .App .Toggle {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 50px);
+    width: 85px;
+    height: 60px;
+    border-radius: 35px;
+    background-color: $brightWhite;
+    color: $brightWhite;
+    transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
+    box-shadow: rgba(236, 236, 236, 0.1) 0px 8px 24px,
+      rgba(236, 236, 236, 0.1) 0px 16px 56px,
+      rgba(236, 236, 236, 0.1) 0px 24px 80px;
+  }
 }

@@ -1,0 +1,45 @@
+@import "../App.module.scss";
+$transitionDurationx: 1s;
+
+.Card {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 150px);
+  border: 1px solid $darkBlue;
+  border-radius: 35px;
+  background-color: rgba(236, 236, 236, 0.5);
+  box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
+    rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 0.1) 0px 24px 80px;
+  > h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  > p {
+    margin-top: 20px;
+    font-family: "Bebas Neue", cursive;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+}
+
+.LightMode .Card {
+  color: $darkBlue;
+  transition: all $transitionDurationx cubic-bezier(0.42, 0, 0.58, 1);
+  border: 1px solid $darkBlue;
+  background-color: rgba(236, 236, 236, 0.5);
+  box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
+    rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 1) 0px 24px 80px;
+}
+
+.DarkMode .Card {
+  color: $brightWhite;
+  transition: all $transitionDurationx cubic-bezier(0.42, 0, 0.58, 1);
+  border: 1px solid $brightWhite;
+  background-color: rgba(34, 40, 49, 0.75);
+  box-shadow: rgba(236, 236, 236, 0.1) 0px 8px 24px,
+    rgba(236, 236, 236, 0.1) 0px 16px 56px,
+    rgba(236, 236, 236, 0.1) 0px 24px 80px;
+}
