@@ -11,10 +11,13 @@ export default function Card() {
         >
           <div className={styles.Card}>
             <h1>Theme Toggler</h1>
-            <p>Sliding icons - Framer Motion</p>
-            <p>Theme State - React useContext</p>
-            <p>Dark Mode state - stored globally</p>
+            <p>Dark mode / Light mode</p>
+            <p>Framer Motion</p>
+            <p>React useContext</p>
+            <p>Global state</p>
+
             <p> Enjoy!</p>
+            <h3 className={styles.Tag}>Coded by Karolis Kimtys</h3>
           </div>
         </div>
       )}

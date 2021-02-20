@@ -21,37 +21,29 @@ body {
   top: 5px;
 }
 
+.App .Toggle {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 50px);
+  width: 85px;
+  height: 60px;
+  border-radius: 35px;
+  transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
+  background-color: $darkBlue;
+  box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
+    rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 1) 0px 24px 80px;
+}
+
 .LightMode {
   background-color: rgba(236, 236, 236, 0.55);
   transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
-  > .App .Toggle {
-    position: absolute;
-    top: 100px;
-    left: calc(50% - 50px);
-    width: 85px;
-    height: 60px;
-    border-radius: 35px;
-    background-color: $darkBlue;
-    color: $brightWhite;
-    transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
-    box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
-      rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 1) 0px 24px 80px;
-  }
 }
 
 .DarkMode {
   background-color: rgba(34, 40, 49, 0.55);
   transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
   > .App .Toggle {
-    position: absolute;
-    top: 100px;
-    left: calc(50% - 50px);
-    width: 85px;
-    height: 60px;
-    border-radius: 35px;
     background-color: $brightWhite;
-    color: $brightWhite;
-    transition: all $transitionDuration cubic-bezier(0.42, 0, 0.58, 1);
     box-shadow: rgba(236, 236, 236, 0.1) 0px 8px 24px,
       rgba(236, 236, 236, 0.1) 0px 16px 56px,
       rgba(236, 236, 236, 0.1) 0px 24px 80px;

@@ -9,9 +9,10 @@ $transitionDurationx: 1s;
   left: calc(50% - 150px);
   border: 1px solid $darkBlue;
   border-radius: 35px;
+  transition: all $transitionDurationx cubic-bezier(0.42, 0, 0.58, 1);
   background-color: rgba(236, 236, 236, 0.5);
   box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
-    rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 0.1) 0px 24px 80px;
+    rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 1) 0px 24px 80px;
   > h1 {
     text-align: center;
     margin-top: 20px;
@@ -23,20 +24,15 @@ $transitionDurationx: 1s;
     text-align: center;
     font-size: 1.25rem;
   }
-}
-
-.LightMode .Card {
-  color: $darkBlue;
-  transition: all $transitionDurationx cubic-bezier(0.42, 0, 0.58, 1);
-  border: 1px solid $darkBlue;
-  background-color: rgba(236, 236, 236, 0.5);
-  box-shadow: rgba(34, 40, 49, 0.1) 0px 8px 24px,
-    rgba(34, 40, 49, 0.1) 0px 16px 56px, rgba(34, 40, 49, 1) 0px 24px 80px;
+  > .Tag {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
 }
 
 .DarkMode .Card {
   color: $brightWhite;
-  transition: all $transitionDurationx cubic-bezier(0.42, 0, 0.58, 1);
   border: 1px solid $brightWhite;
   background-color: rgba(34, 40, 49, 0.75);
   box-shadow: rgba(236, 236, 236, 0.1) 0px 8px 24px,
